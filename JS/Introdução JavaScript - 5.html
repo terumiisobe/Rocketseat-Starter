@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript</title>
+    </head>
+    <body>
+        
+        <script>
+            function retornaHabilidades(usuarios) {
+               for (let usuario of usuarios){
+                   var retorno = "O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join(', ') + ".";
+                   console.log(retorno);
+               }
+            }
+
+            var usuarios = [
+                {
+                    nome: "Diego",
+                    habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            retornaHabilidades(usuarios);
+        </script>
+    </body>
+</html>
