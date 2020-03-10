@@ -103,3 +103,164 @@ var resultado = usuarios.map(function (usuario) {
   return usuario.idade < 50;
 });
 console.log(resultado);
+/* exercicio 3 */
+// 3.1
+
+var arr = [1, 2, 3, 4, 5];
+var arr0 = arr.map(function (item) {
+  return item + 10;
+});
+console.log(arr0);
+var arr1 = arr.map(function (item) {
+  return item + 10;
+});
+console.log(arr1); // 3.2
+// Dica: Utilize uma constante pra function
+
+var usuarioDiego = {
+  nome: 'Diego',
+  idade: 23
+};
+
+function mostraIdade(usuario) {
+  return usuario.idade;
+}
+
+console.log(mostraIdade(usuarioDiego));
+
+var mostraIdade0 = function mostraIdade0(usuario) {
+  return usuario.idade;
+};
+
+console.log(mostraIdade0(usuarioDiego)); // 3.3
+// Dica: Utilize uma constante pra function
+
+var nome = "Diego";
+var idade = 23;
+
+function mostraUsuario() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return {
+    nome: nome,
+    idade: idade
+  };
+}
+
+console.log(mostraUsuario(nome, idade));
+console.log(mostraUsuario(nome));
+
+var mostraUsuario0 = function mostraUsuario0() {
+  var nome = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'Diego';
+  var idade = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 18;
+  return {
+    nome: nome,
+    idade: idade
+  };
+};
+
+console.log(mostraUsuario0(nome, idade));
+console.log(mostraUsuario0(nome)); // 3.4
+
+var promise = function promise() {
+  return new Promise(function (resolve, reject) {
+    return resolve();
+  });
+};
+
+console.log(promise());
+
+var promise0 = function promise0() {
+  return new Promise(function (resolve, reject) {
+    return resolve();
+  });
+};
+
+console.log(promise0());
+/* exercicio 4 */
+// 4.1
+
+var empresa = {
+  nome0: 'Rocketseat',
+  endereco: {
+    cidade: 'Rio do Sul',
+    estado: 'SC'
+  }
+};
+var nome0 = empresa.nome0,
+    cidade = empresa.endereco.cidade,
+    estado = empresa.endereco.estado;
+console.log(nome0);
+console.log(cidade);
+console.log(estado); // 4.2
+
+function mostraInfo(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  return "".concat(nome, " tem ").concat(idade, " anos.");
+}
+
+console.log(mostraInfo({
+  nome: 'Diego',
+  idade: 23
+}));
+/* exercicio 5 */
+// 5.1
+
+var arrxy = [1, 2, 3, 4, 5, 6];
+var x = arrxy[0],
+    y = arrxy.slice(1);
+console.log(x); // 1
+
+console.log(y); // [2, 3, 4, 5, 6]
+
+var soma = function soma() {
+  for (var _len = arguments.length, a = new Array(_len), _key = 0; _key < _len; _key++) {
+    a[_key] = arguments[_key];
+  }
+
+  return a.reduce(function (total, next) {
+    return total + next;
+  });
+};
+
+console.log(soma(1, 2, 3, 4)); // 5.2
+
+var usuario1 = {
+  nome: 'Diego',
+  idade: 23,
+  endereco: {
+    cidade: 'Rio do Sul',
+    uf: 'SC',
+    pais: 'Brasil'
+  }
+};
+
+var usuario2 = _objectSpread({}, usuario1, {
+  nome: 'Gabriel'
+});
+
+console.log(usuario2);
+
+var usuario3 = _objectSpread({}, usuario1, {
+  endereco: {
+    cidade: 'Lontras'
+  }
+});
+
+console.log(usuario3);
+/* exercicio 6 */
+
+var usuariobt = 'Diego';
+var idadebt = 23;
+console.log("O usu\xE1rio ".concat(usuariobt, " possui ").concat(idadebt, " anos"));
+/* exercicio 7 */
+
+var nome4 = 'Diego';
+var idade4 = 23;
+var usuario4 = {
+  nome4: nome4,
+  idade4: idade4,
+  cidade: 'Rio do Sul'
+};
+console.log(usuario4);
